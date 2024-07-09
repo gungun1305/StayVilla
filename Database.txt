@@ -1,0 +1,48 @@
+create database hotel_management_system;
+use hotel_management_system;
+
+create table Customers
+(
+Customer_id int primary key NOT NULL AUTO_INCREMENT,
+First_name varchar(20) NOT NULL ,
+Last_name varchar(20),
+Phone_no varchar(10) NOT NULL ,
+Aadhaar_no varchar(12) NOT NULL,
+Address varchar(50) NOT NULL,
+City varchar(20) NOT NULL ,
+Room_no int,
+Total_Bill int
+);
+
+create table Rooms
+(
+Room_no int,
+Floor_no int,
+Room_Type varchar(20),
+Room_charges int,
+Status varchar(20)
+);
+
+create table Bookings
+(
+Customer_id int,
+Room_no int,
+Arrival Date NOT NULL,
+Departure Date NOT NULL,
+Total_stay int NOT NULL,
+Total_pay int
+);
+
+INSERT into Customers (First_name,Last_name,Phone_no,Aadhaar_no,Address,City,Room_no,Total_bill) VALUES
+('Samar','Kapoor','9944567542','123443211234','H_no.424 Sector -14 Preet Vihar','Delhi',NULL,NULL),
+('Sahil','Singh','9234625455','174835271753','H_no.232 Sector 4 ','Noida',NULL,NULL),
+('Venus','Rawat','9556644345','999867542323','1201 KDP Grand Savanna','Ghaziabad',NULL,NULL),
+('Anjali','Sharma','9753261244','544352625364','H_no.102 Sector - 1 Vaishali','Ghaziabad',NULL,NULL),
+('Aman','Saxena','7236425646','232364732453','12 English Villa','Panaji',NULL,NULL),
+('Shubham','Malik','6342534252',645294530111','200 Sector - 5 Nehru Nagar','Delhi',NULL,NULL),
+('Shubhang','Singh','9953231673','655888362265','402 Golf Link Residence','Pune',NULL,NULL),
+('Rohan','Singh','8532267542','655388097765','H_no.34 Sector - 01 Surat City','Ludhiana',NULL,NULL),
+('Nandini','Garg','8662344332','900199823364','H.no 12 Block A Defence Colony','Meerut',NULL,NULL),
+('Shreja','Verma','7392364512','423564452673','R-50 Godwins Dwellings','Mumbai',NULL,NULL);
+
+INSERT INTO ROOMS(Room_no)
